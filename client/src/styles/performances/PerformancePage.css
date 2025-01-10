@@ -1,0 +1,235 @@
+.performancePage-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+}
+
+.performancePage-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.performancePage-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.performancePage-searchBox {
+    flex: 1;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.performancePage-searchBox:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+    outline: none;
+}
+
+.performancePage-sortDropdown,
+.performancePage-genreFilter {
+    position: relative;
+}
+
+.performancePage-sortButton,
+.performancePage-genreFilterButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.performancePage-sortButton i,
+.performancePage-genreFilterButton i {
+    margin-right: 10px;
+}
+
+.performancePage-sortButton:hover,
+.performancePage-genreFilterButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.performancePage-genreDropdown,
+.performancePage-sortOptions {
+    display: none;
+    position: absolute;
+    top: 100%; /* Обеспечивает отображение под кнопкой */
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    width: max-content; /* Добавлено, чтобы меню не влияло на ширину родителя */
+}
+
+.performancePage-genreFilter:hover .performancePage-genreDropdown,
+.performancePage-sortDropdown:hover .performancePage-sortOptions {
+    display: block;
+}
+
+.performancePage-genreOption,
+.performancePage-sortOptions button {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.performancePage-genreOption input,
+.performancePage-sortOptions button {
+    margin-right: 10px;
+}
+
+.performancePage-sortOptions button:hover,
+.performancePage-genreOption:hover {
+    color: #6c63ff;
+}
+
+.performancePage-genreOption input {
+    margin-right: 10px;
+}
+
+.performancePage-addButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.performancePage-addButton i {
+    margin-right: 10px;
+}
+
+.performancePage-addButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.performancePage-performanceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.performancePage-performanceItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.performancePage-performanceItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.performancePage-poster {
+    width: 100px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.performancePage-performanceInfo {
+    flex: 1;
+}
+
+.performancePage-performanceTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    margin: 0 0 5px;
+}
+
+.performancePage-performanceGenre,
+.performancePage-performanceDuration {
+    font-size: 16px;
+    color: #757575;
+    margin: 0;
+}
+
+.performancePage-buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.performancePage-editButton,
+.performancePage-deleteButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.performancePage-editButton i,
+.performancePage-deleteButton i {
+    margin-right: 10px;
+}
+
+.performancePage-editButton {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.performancePage-editButton:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.performancePage-deleteButton {
+    background-color: #ff5252;
+    color: white;
+}
+
+.performancePage-deleteButton:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}

@@ -1,0 +1,114 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Login Page Styles */
+.loginPage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    gap: 20px;
+}
+
+.loginPage-mainForm {
+    display: grid;
+    gap: 20px;
+}
+
+.loginPage-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.loginPage-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+.loginPage-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loginPage-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.loginPage-submitButton {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginPage-submitButton:hover {
+    background-color: #3700b3;
+}
+
+.loginPage-submitButton:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Register Link Styles */
+.loginPage-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.loginPage-registerLink {
+    color: #6200ea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.loginPage-registerLink:hover {
+    text-decoration: underline;
+}
+
+/* Success and Error Message Styles */
+.success-message {
+    color: green;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}

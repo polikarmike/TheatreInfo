@@ -1,0 +1,203 @@
+.bookingPage-theatre-hall {
+    font-family: 'Roboto', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.bookingPage-theatre-header h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.bookingPage-theatre-header p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.theatre-hall-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Меняем ширину контейнера */
+    max-width: 900px; /* Увеличиваем максимальную ширину */
+    height: auto; /* Автоматическая высота */
+    padding: 20px; /* Увеличиваем отступы вокруг содержимого */
+    margin: 10px auto; /* Добавляем отступы */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+
+}
+
+.bookingPage-screen {
+    width: 800px;
+    height: 150px; /* Уменьшаем высоту экрана */
+    margin-top: 10px; /* Добавляем отступ сверху */
+    background: radial-gradient(circle at bottom, #333, #111);
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 8px 8px 50% 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bookingPage-seating-area {
+    --scale-coefficient: 1;
+    --height: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    height: var(--height);
+    transform: scale(var(--scale-coefficient, 1));
+    transform-origin: top center;
+}
+
+.bookingPage-seat-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Уменьшаем зазоры между сиденьями */
+    flex-wrap: nowrap;
+
+}
+
+.bookingPage-row-label {
+    font-size: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+    text-align: center;
+    width: 30px; /* Фиксированная ширина для выравнивания меток */
+    margin-right: 1px;
+}
+
+.bookingPage-seat-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Уменьшаем зазоры между сиденьями */
+    flex-wrap: nowrap;
+
+}
+
+.bookingPage-seat {
+    width: calc(100% / 15); /* Ширина сидений адаптируется к количеству в ряду */
+    max-width: 60px; /* Ограничиваем максимальный размер */
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.bookingPage-seat:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bookingPage-regular-seat {
+    background-color: #90caf9;
+}
+
+.bookingPage-vip-seat {
+    background-color: #ffd700;
+}
+
+.bookingPage-selected-seat {
+    background-color: #4caf50;
+    color: white;
+}
+
+.bookingPage-occupied-seat {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.legend-regular {
+    background-color: #90caf9; /* Обычное место */
+}
+
+.legend-vip {
+    background-color: #ffd700; /* VIP место */
+}
+
+.legend-selected {
+    background-color: #4caf50; /* Выбранное место */
+}
+
+.legend-occupied {
+    background-color: #cbcbcb; /* Занятое место */
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.booking-button {
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.booking-button:hover {
+    background-color: #45a049;
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loading-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: gray;
+    margin: 20px 0;
+}

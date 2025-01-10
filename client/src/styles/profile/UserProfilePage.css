@@ -1,0 +1,229 @@
+.userProfile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.userProfile-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.userProfile-info {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Устанавливаем flex-контейнер */
+    justify-content: space-between; /* Размещаем данные слева, кнопки справа */
+    align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+    position: relative; /* Для управления дочерними элементами */
+}
+
+
+.userProfile-info .profile-data {
+    display: flex;
+    flex-direction: column; /* Данные располагаются колонкой */
+    flex: 1; /* Занимают всё доступное пространство слева */
+}
+
+
+.userProfile-info .profile-button-container {
+    display: flex;
+    flex-direction: column; /* Кнопки располагаются колонкой */
+    gap: 10px; /* Расстояние между кнопками */
+    flex-shrink: 0; /* Кнопки не сжимаются */
+    margin-left: 20px; /* Отступ от данных */
+    align-items: flex-start; /* Выравниваем кнопки по левому краю */
+    width: auto; /* Ширина кнопок зависит от их содержимого */
+}
+
+
+.userProfile-info p {
+    width: 100%; /* Занимает всю ширину */
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.userProfile-subtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.userProfile-bookingList {
+    list-style: none;
+    padding: 0;
+}
+
+.userProfile-bookingItem {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-details {
+    flex-grow: 1;
+}
+
+.userProfile-bookingItem h4 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.userProfile-bookingItem p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #777;
+}
+
+.profile-btn-primary {
+    display: inline-block;
+    width: 100%; /* Кнопки одинаковой ширины */
+    padding: 10px;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center; /* Центрируем текст */
+}
+
+.profile-editButton {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.profile-editButton:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.profile-passwordButton {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.profile-passwordButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.profile-btn-danger {
+    display: inline-block;
+    width: 15%; /* Кнопки одинаковой ширины */
+    padding: 10px 8px;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center; /* Центрируем текст */
+    background-color: #dc3545;
+    color: white;
+}
+
+.profile-btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.success-message {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между кнопками */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+}
+
+.profile-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+/* Затемнение фона */
+.profile-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Затемнённый фон */
+    z-index: 999;
+}
+
+.profile-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.profile-modal-closeButton {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.profile-modal-body {
+    padding: 20px 0;
+}
+
+.no-bookings {
+    text-align: center;
+    font-size: 16px;
+
+    margin-bottom: 20px;
+    color: #333;
+}

@@ -1,0 +1,54 @@
+/* AddWorkerPage.css */
+.addWorkerPage-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addWorkerPage-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.addWorkerPage-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addWorkerPage-label {
+    margin-bottom: 15px;
+}
+
+.addWorkerPage-input,
+.addWorkerPage-textarea,
+.addWorkerPage-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.addWorkerPage-textarea {
+    height: 80px;
+}
+
+.addWorkerPage-submitButton {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.addWorkerPage-submitButtonHover:hover {
+    background-color: #3700b3;
+}

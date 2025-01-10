@@ -1,0 +1,114 @@
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.modal-closeButton {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.roles-workers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.roles-workers-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.role-item {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: left;
+}
+
+.worker-item {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.worker-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.worker-select:focus {
+    border-color: #007bff;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-saveButton,
+.modal-cancelButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-saveButton {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.modal-saveButton:hover {
+    background-color: #388e3c;
+}
+
+.modal-cancelButton {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.modal-cancelButton:hover {
+    background-color: #d32f2f;
+}

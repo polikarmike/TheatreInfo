@@ -1,0 +1,233 @@
+.schedulePage-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+}
+
+.schedulePage-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.schedulePage-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.schedulePage-searchBox {
+    flex: 1;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.schedulePage-searchBox:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+    outline: none;
+}
+
+.schedulePage-sortDropdown,
+.schedulePage-performanceFilter {
+    position: relative;
+}
+
+.schedulePage-sortButton,
+.schedulePage-performanceFilterButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.schedulePage-sortButton i,
+.schedulePage-performanceFilterButton i {
+    margin-right: 10px;
+}
+
+.schedulePage-sortButton:hover,
+.schedulePage-performanceFilterButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.schedulePage-sortOptions,
+.schedulePage-performanceDropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Обеспечивает отображение под кнопкой */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    width: max-content; /* Добавлено, чтобы меню не влияло на ширину родителя */
+}
+
+.schedulePage-sortButton:hover + .schedulePage-sortOptions,
+.schedulePage-performanceFilterButton:hover + .schedulePage-performanceDropdown {
+    display: block;
+}
+
+.schedulePage-sortOptions button,
+.schedulePage-performanceDropdown label {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.schedulePage-sortOptions button:hover,
+.schedulePage-performanceDropdown label:hover {
+    color: #6c63ff;
+}
+
+.schedulePage-addButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.schedulePage-addButton i {
+    margin-right: 10px;
+}
+
+.schedulePage-addButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.schedulePage-scheduleList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedulePage-scheduleItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.schedulePage-scheduleItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.schedulePage-scheduleInfo {
+    flex: 1;
+}
+
+.schedulePage-scheduleTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    margin: 0 0 5px;
+}
+
+.schedulePage-scheduleDateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #757575;
+    text-align: center;
+    width: 100px;
+}
+
+.schedulePage-scheduleDate {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.schedulePage-scheduleTime {
+    font-size: 16px;
+    color: #000000;
+}
+
+.schedulePage-buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.schedulePage-editButton,
+.schedulePage-deleteButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.schedulePage-editButton i,
+.schedulePage-deleteButton i {
+    margin-right: 10px;
+}
+
+.schedulePage-editButton {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.schedulePage-editButton:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.schedulePage-deleteButton {
+    background-color: #ff5252;
+    color: white;
+}
+
+.schedulePage-deleteButton:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}

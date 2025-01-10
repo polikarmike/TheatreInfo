@@ -1,0 +1,244 @@
+.workerPage-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+}
+
+.workerPage-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.workerPage-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.workerPage-searchBox {
+    flex: 1;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.workerPage-searchBox:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+    outline: none;
+}
+
+.workerPage-addButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.workerPage-addButton i {
+    margin-right: 10px;
+}
+
+.workerPage-addButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.workerPage-linkButton {
+    text-decoration: none;
+    color: inherit;
+}
+
+.workerPage-actorList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.workerPage-actorItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.workerPage-actorItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.workerPage-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #6c63ff;
+    transition: transform 0.3s;
+}
+
+.workerPage-actorItem:hover .workerPage-photo {
+    transform: scale(1.1);
+}
+
+.workerPage-actorInfo {
+    flex: 1;
+}
+
+.workerPage-actorName {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    margin: 0 0 5px;
+}
+
+.workerPage-actorRole {
+    font-size: 16px;
+    color: #757575;
+    margin: 0;
+}
+
+.workerPage-buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.workerPage-editButton,
+.workerPage-deleteButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.workerPage-editButton i,
+.workerPage-deleteButton i {
+    margin-right: 10px;
+}
+
+.workerPage-editButton {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.workerPage-editButton:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.workerPage-deleteButton {
+    background-color: #ff5252;
+    color: white;
+}
+
+.workerPage-deleteButton:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.workerPage-roleFilter,
+.workerPage-sortDropdown {
+    position: relative;
+}
+
+.workerPage-roleFilterButton,
+.workerPage-sortButton {
+    display: flex;
+    align-items: center;
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.workerPage-roleFilterButton i,
+.workerPage-sortButton i {
+    margin-right: 10px;
+}
+
+.workerPage-roleFilterButton:hover,
+.workerPage-sortButton:hover {
+    background-color: #524bdf;
+    transform: scale(1.05);
+}
+
+.workerPage-roleDropdown,
+.workerPage-sortOptions {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.workerPage-roleFilter:hover .workerPage-roleDropdown,
+.workerPage-sortDropdown:hover .workerPage-sortOptions {
+    display: block;
+}
+
+.workerPage-roleOption {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workerPage-roleOption input {
+    margin-right: 10px;
+}
+
+.workerPage-sortOptions button {
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.workerPage-sortOptions button:hover {
+    color: #6c63ff;
+}
